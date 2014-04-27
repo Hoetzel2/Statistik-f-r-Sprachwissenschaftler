@@ -1,7 +1,7 @@
 # Hausaufgabe 03
-# Phillip Alday <phillip.alday@staff.uni-marburg.de>
-# 2014-04-23
-# Dieses Werk ist lizenziert unter einer CC-BY-NC-SA Lizenz.
+# Achim Hötzel
+# 2014-04-27
+# Dieses Werk ist lizenziert unter einer CC-BY-NC-XY Lizenz.
 
 # Sie sollten die Datei auch in Ihren Ordner kopieren und einen Commit machen, 
 # bevor Sie die Kopie weiter anpassen! Vergessen Sie dabei nicht, Namen, Datum
@@ -98,11 +98,11 @@ print(my.data**3)
 # Vervollständigen Sie folgende Zeile, sodass Prozentwerte aus den relativen
 # Häufigkeiten entst ehen:
   tabelle.prozent <- tabelle.rel*100 
- print(tabelle.prozent)
+  print(tabelle.prozent)
 
 # Aber die Frage bleibt, wie berechnen wir den Modus? Durch sortieren!
- tabelle.sorted <- sort(tabelle,decreasing=TRUE)
- print(tabelle.sorted)
+  tabelle.sorted <- sort(tabelle,decreasing=TRUE)
+  print(tabelle.sorted)
 
 # Sie sehen hier, dass manche Funktionen weitere Optionen haben, die wir
 # bestimmen können. Hier wollten wir, dass die Liste mit dem größten Wert
@@ -110,20 +110,37 @@ print(my.data**3)
 
 # Nehmen Sie das erste Element aus dem obigen Ergebnis, um den Modalwert zu
 # bekommen:
- modus <- tabelle.sorted
+  print(tabelle.sorted[1])
 
 # Verständisfrage: gibt es immer nur *einen* Modalwert? 
 # Wenn nicht, ist der Code oben korrekt? Warum?
 # Schreiben Sie Ihre Antwort als Comment hier.
 
-# antwort_hier
+# Nein, eine Variable muss nicht immer nur einen Modus enthalten. Die Häufigkeitsverteilung
+# einer Variable kann auch mehrere Modi besitzen. Die Anzahl der Ausprägungen unserer Variable 
+# "Geschlecht" sähen in diesem Fall folgendermaßen aus: m= 11 w=11.
+# Der oben angewandte R-Code wäre in diesem Beispiel dennoch richtig, denn egal wieviele Modi eine 
+# Variable besitzt, sie entspechen immer dem höchsten Zahlenwert der Häufigkeitsverteilung einer 
+# Variable. Aus diesem Grund entspricht in einer abfallenden sortierten Liste der erste Wert immer 
+# dem Modus der Häufigkeitsverteilung. So wäre in unserem Beispiel der Variable "Geschlecht" der Modus 
+# der Ausprägungen m=11 und w=11 immer noch 11.
+#
+# Allerdings ist bei diesem R-Code, mit welchem der Modus berechnet werden soll, eine Einschränkung zu 
+# machen. Er erlaubt nicht die Entscheidung zu treffen, ob die Häufigkeitsverteilung der Variable nur 
+# einen Modus besitzt oder mehrere. Dies liegt daran, dass nur die höchste Zahl ausgegeben wird, aber 
+# keine Information darüber geliefert wird, wie häufig diese vorkommt.
+# In unserm Beispiel der Variable "Geschlecht" erhalten wird dabei keine Auskunft darüber, dass der Modus
+# 11 mehrfach enthalten ist. Aus unserer Modusbestimmung lässt sich also keine Entscheidung darüber treffen,
+# ob es sich um eine unimodale oder um eine bimodale Verteilung handelt.  
+
+
 
 # Als Abscheid ein Beispiel mit der Darstellung Frequenzdaten mit Säulendiagramm
 # bzw. Histogramm
 
-# library(ggplot2)
-# my.histogram <- qplot(more.data,geom="histogram")
-# print(my.histogram)
+ library(ggplot2)
+ my.histogram <- qplot(more.data,geom="histogram")
+ print(my.histogram)
 
 # Sie sind jetzt fertig -- das waren ganz viele Kleinigkeiten, aber
 # Kleinigkeiten, die wir immer wieder nutzen werden. Machen Sie einen Commit und
