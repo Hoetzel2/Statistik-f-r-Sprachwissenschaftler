@@ -69,6 +69,14 @@ print(summary(m2))
 # es oben für die zwei bisherigen Modelle gemacht habe.
 
 # CODE_HIER
+ggplot(women.metric,aes(x=weight,y=height)) +  geom_point() + geom_smooth(method="lm")
+m3 <- lm(height.cm ~ weight.kg, data=women.metric)
+print(summary(m))
+
+# CODE_HIER
+ggplot(women.metric,aes(x=weight.kg,y=height.cm)) +  geom_point() + geom_smooth(method="lm")
+m4 <- lm(height.cm ~ weight.kg, data=women.metric)
+print(summary(m2))
 
 # Hat sich der R^2 Wert geändert? Die t-Werte? Die Koeffizienten? Was ist die
 # Beziehung zwischen diesem Modell und m2?
