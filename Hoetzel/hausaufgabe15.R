@@ -38,7 +38,7 @@
 library(ggplot2)
 
 # und danach die Daten:
-body <- read.table("body_dim_long.tab",header=TRUE) 
+body <- read.table("body_dim_long.tab",header=TRUE)
 
 # Wir werden auch den Datensatz women nutzen, der schon mit R geliefert wird.
 # Mehr Information zum Datensatz bekommen Sie mit ?women. Die Angaben sind in
@@ -70,13 +70,13 @@ print(summary(m2))
 
 # CODE_HIER
 ggplot(women.metric,aes(x=weight,y=height)) +  geom_point() + geom_smooth(method="lm")
-m3 <- lm(height.cm ~ weight.kg, data=women.metric)
-print(summary(m))
+m3 <- lm(height ~ weight, data=women.metric)
+print(summary(m3))
 
 # CODE_HIER
 ggplot(women.metric,aes(x=weight.kg,y=height.cm)) +  geom_point() + geom_smooth(method="lm")
 m4 <- lm(height.cm ~ weight.kg, data=women.metric)
-print(summary(m2))
+print(summary(m4))
 
 # Hat sich der R^2 Wert geändert? Die t-Werte? Die Koeffizienten? Was ist die
 # Beziehung zwischen diesem Modell und m2?
@@ -85,6 +85,16 @@ print(summary(m2))
 # Sie ein Modell für das Gewicht der Teilnehmer als Funktion von Körpergröße.
 
 # CODE_HIER
+ggplot(body,aes(x=height,y=weight)) +  geom_point() + geom_smooth(method="lm")
+m5 <- lm(weight ~ height, data=body)
+print(summary(m5))
+
+
+# nur Teilnehmerinnen
+body.frauen <- subset(body, body$sex=="f")
+ggplot(body.frauen,aes(x=height,y=weight)) +  geom_point() + geom_smooth(method="lm")
+m6 <- lm(weight ~ height, data=body.frauen)
+print(summary(m6))
 
 # Warum funktioniert die Regression besser beim Datensatz "women" als bei den
 # Kursteilnehmerdaten? HINT: Lesen Sie die Hilfe-Beschreibung von women! 
