@@ -85,6 +85,7 @@ print(summary(m4))
 # Sie ein Modell für das Gewicht der Teilnehmer als Funktion von Körpergröße.
 
 # CODE_HIER
+#Teilnehmer insgesamt
 ggplot(body,aes(x=height,y=weight)) +  geom_point() + geom_smooth(method="lm")
 m5 <- lm(weight ~ height, data=body)
 print(summary(m5))
