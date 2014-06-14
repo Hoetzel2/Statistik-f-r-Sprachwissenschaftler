@@ -59,8 +59,10 @@ Diese Veranstaltung bietet eine praktische Einführung in statistische Verfahren
 |      |                | *Hausaufgabe bis 10.06.2014 10 Uhr:*
 |      |                | 1. `hausaufgabe15.R`
 | 09.  | **09.06.2014** | fällt aus! (Pfingstmontag)
-|      | **10.06.2014** | lineare Regression II, evtl. Korrelationen  
-| 10.  | **16.06.2014** | Korrelationen I
+|      | **10.06.2014** | lineare Regression II
+|      |                | *Hausaufgabe bis 16.06.2014 12 Uhr:*
+|      |                | 1. `hausaufgabe16.Rmd`
+| 10.  | **16.06.2014** | Korrelationen
 |      | **17.06.2014** | das generalisierte lineare Model (GLM), logit-Regression
 | 11.  | **23.06.2014** | gemischte Modelle I
 |      | **24.06.2014** | gemischte Modelle II
@@ -100,6 +102,7 @@ Die Reihe *Use R!* von Springer ist **kostenlos** über das Uni-Netz elektronisc
 * [Git -- the simple guide](http://rogerdudler.github.io/git-guide/)
 * [Literate programming, version control, reproducible research, collaboration, and all that](http://rpubs.com/bbolker/3153)
 * [Handy statistical lexicon](http://andrewgelman.com/2009/05/24/handy_statistic/)
+* [R for Cats](http://rforcats.net/)
 
 # ShinyApps
 * [Optional Stopping](https://palday.shinyapps.io/optional_stopping/)
