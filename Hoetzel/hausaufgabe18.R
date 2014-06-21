@@ -1,7 +1,7 @@
 # Hausaufgabe 18
-# Phillip Alday <phillip.alday@staff.uni-marburg.de>
-# 2014-06-17
-# Dieses Werk ist lizenziert unter einer CC-BY-NC-SA Lizenz.
+# Achim Hötzel <Hoetzel@students.uni-marburg.de>
+# 2014-06-21
+# Dieses Werk ist lizenziert unter einer CO-BA-NC-SA Lizenz.
 
 
 # Die nächsten Punkte sollten ziemlich automatisch sein...
