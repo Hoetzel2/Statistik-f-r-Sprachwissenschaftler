@@ -94,7 +94,7 @@ print(model.summary2)
 # nicht zu stark miteinander korrelieren. Das könnten wir auch mit cor()
 # austesten. Hier sollten Sie schon Pearsons Korrelationkoeffizienten nennen
 # können, ohne folgenden Befehl auszuführen.
-# cor(linreg$x1,linreg$x2)
+ cor(linreg$x1,linreg$x2)
 
 # Wir laden jetzt einen weiteren Datensatz als Beispiel: 
 # (Sie müssen den folgenden Befehl evtl. anpassen!)
@@ -116,17 +116,23 @@ ggplot(pyreg, aes(x = x2, y = y)) + geom_point() + geom_smooth(method = "lm")
 
 # CODE_HIER
 summary(lm(y ~ x1, data=pyreg))
+
+
 # CODE_HIER
 summary(lm(y ~ x2, data=pyreg))
 # Bevor Sie die Regression y ~ x1 + x2 berechnen, schauen Sie sich die
 # Korrelation (mit Konfidenzintervall!) zwischen x1 und x2 an:
 
 # CODE_HIER
+cor.test(pyreg$x1, pyreg$x2, method="pearson")
 
 # Wenn Sie nicht miteinander signifikant korreliert sind, sollten Sie auch die
 # Regression y ~ x1 + x2 berechnen:
 
 # CODE_HIER
+summary(lm(y ~ x1 + x2, data=pyreg))
+
+
 
 # Wie gut passt das lineare Modell zu den Daten? Schauen Sie sich die R^2 und 
 # F-Werte an sowie auch die t-Werte für die einzelnen Prediktoren. Glauben Sie, 
@@ -134,15 +140,22 @@ summary(lm(y ~ x2, data=pyreg))
 # oben für y ~ x1 + x2, **nachdem Sie sich eine Antwort überlegt haben**.
 
 # CODE_HIER
+ggplot(pyreg, aes(x = x1, y = x2)) + geom_point(aes(size = y))
+
 
 # Glauben Sie jetzt, dass y im linearen Verhältnis zu x1 und x2 steht? Warum (nicht)?
 
 # Wie sieht mit Korrelationen aus? Berechnen Sie die Korrelation (sowohl Pearson
 # als auch Spearman) zwischen (y und x1) sowie auch zwischen (y und x2). 
 
-# CODE_HIER
+# CODE_HIER (y und x1)
+cor.test(pyreg$y, pyreg$x1, method="pearson")
+cor.test(pyreg$y, pyreg$x1, method="spearman")
 
-# CODE_HIER 
+# CODE_HIER (y und x2)
+cor.test(pyreg$y, pyreg$x2, method="pearson")
+cor.test(pyreg$y, pyreg$x2, method="spearman")
+
 
 # Welche Art von Korrelation macht am meisten Sinn bei diesen Daten?
 
