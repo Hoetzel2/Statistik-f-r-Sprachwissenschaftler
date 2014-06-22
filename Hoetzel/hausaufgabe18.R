@@ -1,7 +1,7 @@
 # Hausaufgabe 18
 # Achim Hötzel <Hoetzel@students.uni-marburg.de>
 # 2014-06-21
-# Dieses Werk ist lizenziert unter einer CO-BA-NC-SA Lizenz.
+# Dieses Werk ist lizenziert unter einer CO-BA-NC-AS Lizenz.
 
 
 # Die nächsten Punkte sollten ziemlich automatisch sein...
