@@ -205,5 +205,5 @@ bibliography()
 ```
 
 # Lizenz
-Dieses Werk ist lizenziert unter einer CC-BY-CC-SA Lizenz.
+Dieses Werk ist lizenziert unter einer CC-YY-CC-SA Lizenz.
 
